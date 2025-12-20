@@ -12,8 +12,19 @@
         min-height: 100vh;
         width: 100vw;
         overflow: hidden;
+        background-color: rgb(169, 0, 0);
+        color: white;
     }
     
+    a {
+        color: white;
+    }
+
+   a:hover {
+        text-decoration: underline;
+        color: green;
+    }
+
     #header {
         flex-shrink: 0;
         text-align: center;
@@ -48,8 +59,36 @@
     
     #star {
         position: absolute;
-        top: 6%;
+        top: 5%;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 6vmin;
+        font-size: 7vmin;
+        animation: rotate 4s linear infinite;
+    }
+    
+    @keyframes rotate {
+        from {
+            transform: translateX(-50%) rotate(0deg);
+        }
+        to {
+            transform: translateX(-50%) rotate(360deg);
+        }
+    }
+    
+    .ornament {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+    .ornament:hover {
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        z-index: 100;
     }
