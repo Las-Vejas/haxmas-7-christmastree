@@ -1,94 +1,98 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 100vh;
-        width: 100vw;
-        overflow: hidden;
-        background-color: rgb(169, 0, 0);
-        color: white;
-    }
-    
-    a {
-        color: white;
-    }
+@font-face {
+    font-family: 'JollySweater';
+    src: url('assets/fonts/JollySweater-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-   a:hover {
-        text-decoration: underline;
-        color: green;
-    }
+@font-face {
+    font-family: 'JollySweater';
+    src: url('assets/fonts/JollySweater-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
-    #header {
-        flex-shrink: 0;
-        text-align: center;
-        padding: 1rem;
-    }
-    
-    #footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        text-align: center;
-        padding: 1rem;
-        background: transparent;
-        z-index: 10;
-    }
-    
-    #tree-container {
-        position: relative;
-        flex: 1;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    svg {
-        width: 30%;
-        height: 100%;
-    }
-    
-    #star {
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        font-size: 7vmin;
-        animation: rotate 4s linear infinite;
-    }
-    
-    @keyframes rotate {
-        from {
-            transform: translateX(-50%) rotate(0deg);
-        }
-        to {
-            transform: translateX(-50%) rotate(360deg);
-        }
-    }
-    
-    .ornament {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        z-index: 1;
-    }
-    
-    .ornament:hover {
-        width: 200px;
-        height: 200px;
-        border-radius: 10px;
-        z-index: 100;
-    }
+@font-face {
+    font-family: 'JollySweater';
+    src: url('assets/fonts/JollySweater-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('assets/fonts/Spectral-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Spectral';
+    src: url('assets/fonts/Spectral-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+#header {
+    font-family: JollySweater, sans-serif;
+}
+
+body{  
+    font-family: 'Spectral', serif;  
+    background-image: linear-gradient(to bottom right, #004201, #890000);  
+    color: azure;  
+}  
+
+#tree-container {
+    max-width: 20rem;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+#tree {
+    width: 20rem;
+    margin-top: 4rem;
+    z-index: 0;
+}
+
+#star {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 5rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+#decorations {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 20rem;
+    height: 25rem;
+    z-index: 1;
+}
+
+#header, #footer{  
+    text-align: center;  
+}
+
+.ornament {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 15;
+}
+
+.ornament:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    z-index: 100;
+}
